@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+  <link href="./style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,800&display=swap" rel="stylesheet">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <script src="./app.js"></script>
+</head>
+<body class="bg-zinc-100">
+  <style>
+    .custom-rounded {
+    border-top-left-radius: 1.5rem; /* Ajusta el valor para cambiar el redondeo */
+    border-top-right-radius: 1.5rem; /* Ajusta el valor para cambiar el redondeo */
+    border-bottom-left-radius: 1.5rem; /* Ajusta el valor para cambiar el redondeo */
+    border-bottom-right-radius: 30%; /* Redondeo total */
+  } 
+  </style>
+  <main class="custom-rounded bg-white mx-auto w-[90%] lg:w-[47rem] items-center mt-28">
+    <form class="flex flex-wrap items-center w-[90%] lg:w-[35rem] ml-4 lg:m-10 justify-between">
+      <div class="flex flex-col w-1/3 mt-12">
+        <label id="dayLabel" for="day" class="text-pop font-bold uppercase text-stone-500 text-[0.9rem]">Day</label>
+        <input id="dayInput" type="number" name="day" min="1" max="31" id="day" placeholder="DD" class="focus:border-violet-500 cursor-pointer w-[89%] border border-zinc-200 rounded-md lg:w-[10rem] h-14 lg:h-16 pl-3 text-black font-bold font-pop text-2xl appearance-none">
+        <div class="text-[10px] mt-2 italic text-red-600" id="dayAlert"></div>
+      </div>
+      <div class="flex flex-col w-1/3 mt-12">
+        <label id="monthLabel" for="month" class="text-pop font-bold uppercase text-stone-500 text-[0.9rem]">Month</label>
+        <input id="monthInput" type="number" name="month" id="day" min="1" max="12"  placeholder="MM" class="focus:border-violet-500 cursor-pointer w-[89%] border border-zinc-200 rounded-md lg:w-[10rem] h-14 lg:h-16 pl-3 text-black font-bold font-pop text-2xl appearance-none">
+        <div class="text-[10px] mt-2 italic text-red-600" id="monthAlert"></div>
+      </div>
+      <div class="flex flex-col w-1/3 mt-12">
+        <label id="yearLabel" for="year" class="text-pop font-bold uppercase text-stone-500 text-[0.9rem]">Year</label>
+        <input id="yearInput" type="number" name="year" id="day" placeholder="YYY" class="focus:border-violet-500 cursor-pointer w-[89%] border border-zinc-200 rounded-md lg:w-[10rem] h-14 lg:h-16 pl-3 text-black font-bold font-pop text-2xl appearance-none">
+        <div class="text-[10px] mt-2 italic text-red-600" id="yearAlert"></div>
+      </div>
+    </form>
+    <div class="mt-8 w-[90%] items-center mx-auto"><hr></div>
+    <button id="button" class="bg-violet-500 hover:bg-black cursor-pointer w-14 lg:w-20 h-14 lg:h-20 rounded-full flex flex-wrap items-center justify-center flex ml-[8.3rem] lg:ml-[40rem] -translate-y-7 lg:-translate-y-10">
+      <img src="./icon-arrow.svg" class="w-7 lg:w-10 h-6 lg:h-10 mx-auto">
+    </button>
+    <div class="flex flex-col ml-4 pb-10">
+      <div class="text-5xl sm:text-8xl font-bold italic font-pop">
+        <span id="resultYear" class="mr-3 text-violet-500">--</span><span>years</span>
+      </div>
+      <div class="text-5xl sm:text-8xl lg:text-8xl font-bold italic font-pop">
+        <span id="resultMonth" class="mr-3 text-violet-500">--</span><span>months</span>
+      </div>
+      <div class="text-5xl sm:text-8xl lg:text-8xl font-bold italic font-pop">
+        <span id="resultDay" class="mr-3 text-violet-500">--</span><span>days</span>
+      </div>
+    </div>
+</main>
+  <div class="attribution mt-20">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">bitc0de</a>.
+  </div>
+</body>
+</html>
